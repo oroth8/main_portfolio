@@ -12,16 +12,16 @@ const Footer = () => {
                         <h2 className="footer-heading">Social Media</h2>
                         <ul className="w-list-unstyled">
                             <li>
-                                <a href="https://www.linkedin.com/in/owen-roth-86ba1ba4/" className="footer-link">Linkedin</a>
+                                <a href="https://www.linkedin.com/in/owen-roth-86ba1ba4/" className="footer-link" target="_blank" rel="noopener noreferrer">Linkedin</a>
                             </li>
                             <li>
-                                <a href="https://github.com/oroth8" className="footer-link">Github</a>
+                                <a href="https://github.com/oroth8" className="footer-link" target="_blank" rel="noopener noreferrer">Github</a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/rothnaldo/" className="footer-link">Instagram</a>
+                                <a href="https://www.instagram.com/rothnaldo/" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
                             </li>
                             <li>
-                                <a href="https://trailblazer.me/id/owenroth" className="footer-link">Salesforce</a>
+                                <a href="https://trailblazer.me/id/owenroth" className="footer-link" target="_blank" rel="noopener noreferrer">Salesforce</a>
                             </li>
                         </ul>
                     </div>
@@ -29,10 +29,10 @@ const Footer = () => {
                         <h2 className="footer-heading">Contract Work</h2>
                         <ul className="w-list-unstyled">
                             <li>
-                                <a href="!#" className="footer-link">Upwork</a>
+                                <a href="!#" className="footer-link" target="_blank" rel="noopener noreferrer">Upwork</a>
                             </li>
                             <li>
-                                <a href="!#" className="footer-link">Fiver</a>
+                                <a href="!#" className="footer-link" target="_blank" rel="noopener noreferrer">Fiver</a>
                             </li>
                         </ul>
                     </div>
