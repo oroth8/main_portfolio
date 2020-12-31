@@ -5,7 +5,7 @@ import whitelogo from '../images/White-logo---no-background.svg';
 const Navbar = () => {
     return (
         <nav>
-            <ul role="list" className="nav-grid w-list-unstyled">
+            <ul className="nav-grid w-list-unstyled">
                 <li id="w-node-5b248a8b462d-4d5e9b9b">
                     <Link to='/' className="nav-logo-link w-inline-block"><img src={whitelogo} width="12" alt="logo" className="nav-logo" /></Link>
                 </li>

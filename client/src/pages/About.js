@@ -19,7 +19,7 @@ const About = () => {
                             <h4 class="info-heading">Phone: (847)-800-5666</h4>
                             <h4 class="info-heading">Location: Chicago, IL</h4>
                             <h4 class="info-heading">Github: oroth8</h4>
-                            <a id="w-node-9ede16908eb0-1086c41b" href="#" class="about-btn btn-title w-button">Download CV</a>
+                            <a id="w-node-9ede16908eb0-1086c41b" href="!#" class="about-btn btn-title w-button">Download CV</a>
                             <h4 class="info-heading">Degree: Economics</h4>
                             <h4 class="info-heading">Language: English</h4>
                         </div>
