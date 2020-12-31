@@ -87,6 +87,11 @@
   padding-right: 10px;
   padding-left: 10px;
 }
+.nav-link.btn:hover {
+  background-color: white;
+  transition: all 0.5s ease;
+  color: #12232e;
+}
 
 .btn {
   display: block;
@@ -260,6 +265,11 @@
   );
 }
 
+.btn-title.btn-title-right:hover {
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
 .btn-title.btn-project {
   display: block;
   width: 120px;
@@ -267,6 +277,11 @@
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+}
+
+.btn-title.btn-project:hover {
+  background-color: white;
+  transition: all 0.5s ease;
 }
 
 .body-2 {
@@ -457,6 +472,10 @@
   width: 150px;
   border-radius: 20px;
   text-align: center;
+}
+.about-btn:hover {
+  background-color: white;
+  transition: all 0.5s ease;
 }
 
 .body-3 {
@@ -658,6 +677,9 @@
 .form-svg {
   width: 50px;
   margin-right: 60px;
+}
+.form-svg:hover {
+  transform: scale(1.5);
 }
 
 .body-6 {
@@ -894,7 +916,7 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: flex !important;
   padding-top: 15px;
   padding-bottom: 15px;
   -webkit-box-pack: center;
