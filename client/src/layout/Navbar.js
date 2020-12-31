@@ -10,7 +10,7 @@ const Navbar = () => {
                     <Link to='/' className="nav-logo-link w-inline-block"><img src={whitelogo} width="12" alt="logo" className="nav-logo" /></Link>
                 </li>
                 <li>
-                    <Link tp='/' className="nav-link">Home</Link>
+                    <Link to='/' className="nav-link">Home</Link>
                 </li>
                 <li>
                     <Link to='/about' className="nav-link">About</Link>
