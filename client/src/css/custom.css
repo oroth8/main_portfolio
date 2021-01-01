@@ -407,6 +407,11 @@
   grid-template-rows: auto auto auto;
 }
 
+.div-block-4 h4 {
+  font-weight: 300;
+  color: #e0e0e0;
+}
+
 .info-heading {
   margin-top: 1px;
   margin-bottom: 0px;
@@ -1931,4 +1936,48 @@
     -ms-grid-column-align: center;
     justify-self: center;
   }
+}
+
+/* About Grid Sections */
+
+.resume {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas: "title1 title2" "nu navyseal" "salesforce trifecta" "wisco healthscape";
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 479px) {
+  .resume {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas: "title1" "nu" "salesforce" "wisco" "title2" "navyseal" "trifecta" "healthscape";
+  }
+  .hide {
+    display: none;
+  }
+}
+
+.title1 {
+  grid-area: title1;
+}
+.title2 {
+  grid-area: title2;
+}
+.navyseal {
+  grid-area: navyseal;
+}
+.salesforce {
+  grid-area: salesforce;
+}
+.nu {
+  grid-area: nu;
+}
+.trifecta {
+  grid-area: trifecta;
+}
+.wisco {
+  grid-area: wisco;
+}
+.healthscape {
+  grid-area: healthscape;
 }
