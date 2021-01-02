@@ -1,4 +1,5 @@
 import React from 'react'
+import emailjs from 'emailjs-com';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 
@@ -8,45 +9,51 @@ import github from '../images/github.svg'
 import linkedin from '../images/linkedin.svg'
 import salesforce from '../images/salesforce.svg'
 
+const emailkey = process.env.REACT_APP_EMAILJS;
+
 const Contact = () => {
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_kxcln1j', 'template_m87egc9', e.target, emailkey)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+    }
     return (
-        <body class="body-5">
+        <body className="body-5">
             <Navbar />
-            <section id="contact-form" class="contact-form">
-                <div class="form-svg-div">
+            <section id="contact-form" className="contact-form">
+                <div className="form-svg-div">
                     <a href='https://github.com/oroth8' target="_blank" rel="noopener noreferrer">
-                        <img src={github} loading="lazy" alt="github" class="form-svg" />
+                        <img src={github} loading="lazy" alt="github" className="form-svg" />
                     </a>
                     <a href='https://www.linkedin.com/in/owen-roth-86ba1ba4/' target="_blank" rel="noopener noreferrer">
-                        <img src={linkedin} loading="lazy" alt="linkedin" class="form-svg" />
+                        <img src={linkedin} loading="lazy" alt="linkedin" className="form-svg" />
                     </a>
                     <a href='https://www.instagram.com/rothnaldo/' target="_blank" rel="noopener noreferrer">
-                        <img src={instagram} loading="lazy" alt="instagram" class="form-svg" />
+                        <img src={instagram} loading="lazy" alt="instagram" className="form-svg" />
                     </a>
                     <a href="https://trailblazer.me/id/owenroth" target="_blank" rel="noopener noreferrer">
-                        <img src={salesforce} loading="lazy" alt="salesforce" class="form-svg" />
+                        <img src={salesforce} loading="lazy" alt="salesforce" className="form-svg" />
                     </a>
                 </div>
-                <div class="field-label w-container">
-                    <h2 class="form-title">CONTACT FORM</h2>
-                    <p class="form-paragraph">Feel free to contact me about any job inquiries, services information, or contract work.</p>
-                    <div id="formInstructions" class="small-text"><em>Fields marked with an asterisk (*) are required.</em></div>
-                    <div class="w-form">
-                        <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form">
-                            <div class="contact-form-grid">
-                                <div id="w-node-c502819a600a-e5692412"><label for="First-Name" id="contact-first-name" class="field-label">First name *</label><input type="text" class="w-input" maxlength="256" name="First-Name" data-name="First Name" id="First-Name" required="" /></div>
-                                <div id="w-node-c502819a600e-e5692412"><label for="Last-Name" id="contact-last-name">Last name *</label><input type="text" class="w-input" maxlength="256" name="Last-Name" data-name="Last Name" id="Last-Name" required="" /></div>
-                                <div id="w-node-c502819a6012-e5692412"><label for="Email" id="contact-email">Email *</label><input type="email" class="w-input" maxlength="256" name="Email" data-name="Email" id="Email" required="" /></div>
-                                <div id="w-node-c502819a6016-e5692412"><label for="Contact-Phone-Number" id="contact-phone">Phone number</label><input type="tel" class="w-input" maxlength="256" name="Contact-Phone-Number" data-name="Contact Phone Number" id="Contact-Phone-Number" /></div>
-                                <div id="w-node-c502819a601a-e5692412"><label for="Message" id="contact-message">Message</label><textarea data-name="Message" maxlength="5000" id="Message" name="Message" class="w-input"></textarea></div>
-                            </div><input type="submit" value="Submit" data-wait="Please wait..." class="btn-title btn-project w-button" />
+                <div className="field-label w-container">
+                    <h2 className="form-title">CONTACT FORM</h2>
+                    <p className="form-paragraph">Feel free to contact me about any job inquiries, services information, or contract work.</p>
+                    <div id="formInstructions" classNameName="small-text"><em>Fields marked with an asterisk (*) are required.</em></div>
+                    <div className="w-form">
+                        <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" onSubmit={sendEmail}>
+                            <div className="contact-form-grid">
+                                <div id="w-node-c502819a600a-e5692412"><label className="field-label">First name *</label><input type="text" className="w-input" maxlength="256" name="first_name" required /></div>
+                                <div id="w-node-c502819a600e-e5692412"><label>Last name *</label><input type="text" className="w-input" maxlength="256" name="last_name" required /></div>
+                                <div id="w-node-c502819a6012-e5692412"><label >Email *</label><input type="email" className="w-input" maxlength="256" name="email" required /></div>
+                                <div id="w-node-c502819a6016-e5692412"><label>Phone number</label><input type="tel" className="w-input" maxlength="256" name="phone" /></div>
+                                <div id="w-node-c502819a601a-e5692412"><label >Message</label><textarea maxlength="5000" name="message" className="w-input"></textarea></div>
+                            </div><input type="submit" value="Submit" className="btn-title btn-project w-button" />
                         </form>
-                        <div class="w-form-done">
-                            <div>Thank you! Your submission has been received!</div>
-                        </div>
-                        <div class="w-form-fail">
-                            <div>Oops! Something went wrong while submitting the form.</div>
-                        </div>
                     </div>
                 </div>
             </section>
