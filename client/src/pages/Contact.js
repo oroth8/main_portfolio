@@ -42,7 +42,13 @@ const Contact = () => {
     const [showFormErr, setShowFormErr] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState({ title: '', paragraph: '' });
     const [showCaptcha, setShowCaptcha] = useState(false);
+    const [emailCounter, setEmailCounter] = useState(true);
     const { first_name, last_name, email, message } = formState;
+
+    const TimeOutFunc = () => {
+        window.location.href = "/contact";
+        console.log("Ran");
+    }
 
     const submitFormAndShowCaptcha = (e) => {
         e.preventDefault();
@@ -74,6 +80,7 @@ const Contact = () => {
             }, () => {
                 setFormSubmitted({ title: 'Error sending message, try again later', paragraph: 'Please contact Owen either by phone (847-800-5666) or email(rothowen27@gmail.com).' });
             });
+        setEmailCounter(!emailCounter);
     };
     return (
         <body className="body-5">
@@ -122,7 +129,8 @@ const Contact = () => {
                             </form>
                         ) : (<ReCAPTCHA
                             sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
-                            onChange={sendEmail} />)}
+                            onChange={emailCounter ? sendEmail : TimeOutFunc}
+                        />)}
                     </div>
                     <div className="error-box">
                         <h3 className="error-text">{formSubmitted.title}</h3>
