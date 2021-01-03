@@ -16,7 +16,7 @@ const Services = () => {
         barVar = webdevelopment;
     }
     return (
-        <body>
+        <div>
             <Navbar />
             <div className="header-container">
                 <h1 className="h1-base">SERVICES</h1>
@@ -25,13 +25,9 @@ const Services = () => {
                     <div className="pricing-switch-block-text">Web Development</div>
                     <div className="switch-block">
                         <CheckBoxWrapper>
-                            <CheckBox id="checkbox" type="checkbox" data-isOn={isOn} onClick={toggleSwitch} />
+                            <CheckBox id="checkbox" type="checkbox" onClick={toggleSwitch} />
                             <CheckBoxLabel htmlFor="checkbox" />
                         </CheckBoxWrapper>
-                        {/* <div data-w-id="30a0ebcb-e139-61f3-c401-17293a48bba7" className="off">
-                            <div data-w-id="30a0ebcb-e139-61f3-c401-17293a48bba8" className="div-block-6"></div>
-                        </div>
-                        <div data-w-id="30a0ebcb-e139-61f3-c401-17293a48bba9" className="on"></div> */}
                     </div>
                     <div className="pricing-switch-block-text">Salesforce</div>
                 </div>
@@ -62,7 +58,7 @@ const Services = () => {
                 </div>
             </div>
             <Footer />
-        </body>
+        </div>
     )
 }
 

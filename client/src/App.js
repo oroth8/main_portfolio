@@ -11,20 +11,23 @@ import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 
+// animation
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/about' component={About} />
-          <Route exact path='/portfolio' component={Portfolio} />
-          <Route exact path='/services' component={Services} />
-          <Route exact path='/contact' component={Contact} />
-        </Switch>
-      </Router>
-
+      <AnimatePresence exitBeforeEnter>
+        <Router>
+          <Switch >
+            <Route exact path='/' component={Home} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='/portfolio' component={Portfolio} />
+            <Route exact path='/services' component={Services} />
+            <Route exact path='/contact' component={Contact} />
+          </Switch>
+        </Router>
+      </AnimatePresence>
 
     </div>
   );

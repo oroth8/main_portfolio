@@ -1,4 +1,6 @@
 import React, { useState, useReducer } from 'react'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import ReCAPTCHA from 'react-google-recaptcha';
 import emailjs from 'emailjs-com';
 import Navbar from '../layout/Navbar';
@@ -83,21 +85,25 @@ const Contact = () => {
         setEmailCounter(!emailCounter);
     };
     return (
-        <body className="body-5">
+        <div className="body-5">
             <Navbar />
             <section id="contact-form" className="contact-form">
                 <div className="form-svg-div">
                     <a href='https://github.com/oroth8' target="_blank" rel="noopener noreferrer">
-                        <img src={github} loading="lazy" alt="github" className="form-svg" />
+                        <motion.img whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} src={github} loading="lazy" alt="github" className="form-svg" />
                     </a>
                     <a href='https://www.linkedin.com/in/owen-roth-86ba1ba4/' target="_blank" rel="noopener noreferrer">
-                        <img src={linkedin} loading="lazy" alt="linkedin" className="form-svg" />
+                        <motion.img whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} src={linkedin} loading="lazy" alt="linkedin" className="form-svg" />
                     </a>
                     <a href='https://www.instagram.com/rothnaldo/' target="_blank" rel="noopener noreferrer">
-                        <img src={instagram} loading="lazy" alt="instagram" className="form-svg" />
+                        <motion.img whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} src={instagram} loading="lazy" alt="instagram" className="form-svg" />
                     </a>
                     <a href="https://trailblazer.me/id/owenroth" target="_blank" rel="noopener noreferrer">
-                        <img src={salesforce} loading="lazy" alt="salesforce" className="form-svg" />
+                        <motion.img whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }} src={salesforce} loading="lazy" alt="salesforce" className="form-svg" />
                     </a>
                 </div>
                 <div className="field-label w-container">
@@ -125,7 +131,8 @@ const Contact = () => {
                                     ></textarea></div>
                                 </div>
                                 {showFormErr ? <p className="sm:mr-4 text-red-400">Please fill in required input boxes to send a message</p> : null}
-                                <input type="submit" value="Submit" className="btn-title btn-project w-button" />
+                                <motion.input whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }} type="submit" value="Submit" className="btn-title btn-project w-button" />
                             </form>
                         ) : (<ReCAPTCHA
                             sitekey={process.env.REACT_APP_CAPTCHA_SITE_KEY}
@@ -136,10 +143,13 @@ const Contact = () => {
                         <h3 className="error-text">{formSubmitted.title}</h3>
                         <p>{formSubmitted.paragraph}</p>
                     </div>
+                    {!emailCounter && (<Link to='/'>
+                        <button className="btn-title btn-project w-button" style={{ textDecoration: "none" }}>Back</button>
+                    </Link>)}
                 </div>
             </section>
             <Footer />
-        </body>
+        </div>
     )
 }
 

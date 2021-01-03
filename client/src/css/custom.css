@@ -1981,3 +1981,21 @@
 .healthscape {
   grid-area: healthscape;
 }
+
+/* portfolio */
+.project-icons i {
+  color: white;
+  margin-left: 1rem;
+}
+
+.project-icons i:hover {
+  color: #007cc7;
+}
+
+#ck-icon {
+  margin-left: 0px;
+}
+
+#gf-icon {
+  margin-left: 0px;
+}

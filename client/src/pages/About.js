@@ -5,7 +5,7 @@ import Footer from '../layout/Footer';
 
 const About = () => {
     return (
-        <body className="body-2">
+        <div className="body-2">
             <Navbar />
             <section id="feature-section" className="feature-section-2">
                 <div className="flex-container w-container">
@@ -70,7 +70,7 @@ const About = () => {
 
             </div>
             <Footer />
-        </body>
+        </div>
     )
 }
 
