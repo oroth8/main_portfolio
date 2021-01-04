@@ -1950,6 +1950,7 @@
   .resume {
     display: grid;
     grid-template-columns: 2fr;
+    grid-template-rows: auto;
     grid-template-areas: "title1" "nu" "salesforce" "wisco" "title2" "navyseal" "trifecta" "healthscape";
   }
   .hide {

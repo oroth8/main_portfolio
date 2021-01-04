@@ -1,66 +1,113 @@
-import React, { useState } from 'react'
-import Navbar from '../layout/Navbar';
-import Footer from '../layout/Footer';
+import React, { useState } from "react";
+import Navbar from "../layout/Navbar";
+import Footer from "../layout/Footer";
 import styled from "styled-components";
-import { webdevelopment, salesforce } from '../api/Services';
-// import { motion } from 'framer-motion';
+import { webdevelopment, salesforce } from "../api/Services";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animation";
 
 const Services = () => {
-    const [isOn, setIsOn] = useState(false);
-    const toggleSwitch = () => setIsOn(!isOn);
+  const [isOn, setIsOn] = useState(false);
+  const toggleSwitch = () => setIsOn(!isOn);
 
-    let barVar = {};
-    if (isOn === true) {
-        barVar = salesforce;
-    } else {
-        barVar = webdevelopment;
-    }
-    return (
-        <div>
-            <Navbar />
-            <div className="header-container">
-                <h1 className="h1-base">SERVICES</h1>
-                <div className="p-base">I will work with you to create a <span className="text-span">fully custom</span> product. Tell me what you envision and I will build it. Not matter how big or small.</div>
-                <div className="pricing-switch-block">
-                    <div className="pricing-switch-block-text">Web Development</div>
-                    <div className="switch-block">
-                        <CheckBoxWrapper>
-                            <CheckBox id="checkbox" type="checkbox" onClick={toggleSwitch} />
-                            <CheckBoxLabel htmlFor="checkbox" />
-                        </CheckBoxWrapper>
-                    </div>
-                    <div className="pricing-switch-block-text">Salesforce</div>
-                </div>
-                <div className="pricing-row">
-                    <div className="pricing-second-block"><img src={barVar.box1.pic} alt="frontend" className="pkg-img" />
-                        <div className="pricing-box">
-                            <h2 className="pkg-name">{barVar.box1.title}</h2>
-                            <div className="pkg-description"><span className="text-span">{barVar.box1.disc1Span}</span> {barVar.box1.disc1}<br /><span className="text-span">{barVar.box1.disc2Span}</span> {barVar.box1.disc2}<br />{barVar.box1.disc3}<br />{barVar.box1.disc4}</div>
-                            <a href="!#" className="pkg-link">Get Started</a>
-                        </div>
-                    </div>
-                    <div className="pricing-second-block middle"><img src={barVar.box2.pic} alt="fullstack" className="pkg-img" />
-                        <div className="pricing-box bottom-round-corner">
-                            <h2 className="pkg-name">{barVar.box2.title}</h2>
-                            <div className="pkg-description"><span className="text-span">{barVar.box2.disc1Span}</span> {barVar.box2.disc1}<br /><span className="text-span">{barVar.box2.disc2Span}</span> {barVar.box2.disc2}<br />{barVar.box2.disc3}<br />{barVar.box2.disc4}</div>
-                        </div>
-                        <a href="!#" className="bottom-btn w-inline-block">
-                            <div className="bottom-btn__link">Get Started</div>
-                        </a>
-                    </div>
-                    <div className="pricing-second-block"><img src={barVar.box3.pic} alt="backend" className="pkg-img" />
-                        <div className="pricing-box">
-                            <h2 className="pkg-name">{barVar.box3.title}</h2>
-                            <div className="pkg-description"><span className="text-span">{barVar.box3.disc1Span}</span> {barVar.box3.disc1}<br /><span className="text-span">{barVar.box3.disc2Span}</span> {barVar.box3.disc2}<br />{barVar.box3.disc3}<br />{barVar.box3.disc4}</div>
-                            <a href="!#" className="pkg-link">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Footer />
+  let barVar = {};
+  if (isOn === true) {
+    barVar = salesforce;
+  } else {
+    barVar = webdevelopment;
+  }
+  return (
+    <motion.div
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <Navbar />
+      <div className="header-container">
+        <h1 className="h1-base">SERVICES</h1>
+        <div className="p-base">
+          I will work with you to create a{" "}
+          <span className="text-span">fully custom</span> product. Tell me what
+          you envision and I will build it. Not matter how big or small.
         </div>
-    )
-}
+        <div className="pricing-switch-block">
+          <div className="pricing-switch-block-text">Web Development</div>
+          <div className="switch-block">
+            <CheckBoxWrapper>
+              <CheckBox id="checkbox" type="checkbox" onClick={toggleSwitch} />
+              <CheckBoxLabel htmlFor="checkbox" />
+            </CheckBoxWrapper>
+          </div>
+          <div className="pricing-switch-block-text">Salesforce</div>
+        </div>
+        <div className="pricing-row">
+          <div className="pricing-second-block">
+            <img src={barVar.box1.pic} alt="frontend" className="pkg-img" />
+            <div className="pricing-box">
+              <h2 className="pkg-name">{barVar.box1.title}</h2>
+              <div className="pkg-description">
+                <span className="text-span">{barVar.box1.disc1Span}</span>{" "}
+                {barVar.box1.disc1}
+                <br />
+                <span className="text-span">{barVar.box1.disc2Span}</span>{" "}
+                {barVar.box1.disc2}
+                <br />
+                {barVar.box1.disc3}
+                <br />
+                {barVar.box1.disc4}
+              </div>
+              <a href="!#" className="pkg-link">
+                Get Started
+              </a>
+            </div>
+          </div>
+          <div className="pricing-second-block middle">
+            <img src={barVar.box2.pic} alt="fullstack" className="pkg-img" />
+            <div className="pricing-box bottom-round-corner">
+              <h2 className="pkg-name">{barVar.box2.title}</h2>
+              <div className="pkg-description">
+                <span className="text-span">{barVar.box2.disc1Span}</span>{" "}
+                {barVar.box2.disc1}
+                <br />
+                <span className="text-span">{barVar.box2.disc2Span}</span>{" "}
+                {barVar.box2.disc2}
+                <br />
+                {barVar.box2.disc3}
+                <br />
+                {barVar.box2.disc4}
+              </div>
+            </div>
+            <a href="!#" className="bottom-btn w-inline-block">
+              <div className="bottom-btn__link">Get Started</div>
+            </a>
+          </div>
+          <div className="pricing-second-block">
+            <img src={barVar.box3.pic} alt="backend" className="pkg-img" />
+            <div className="pricing-box">
+              <h2 className="pkg-name">{barVar.box3.title}</h2>
+              <div className="pkg-description">
+                <span className="text-span">{barVar.box3.disc1Span}</span>{" "}
+                {barVar.box3.disc1}
+                <br />
+                <span className="text-span">{barVar.box3.disc2Span}</span>{" "}
+                {barVar.box3.disc2}
+                <br />
+                {barVar.box3.disc3}
+                <br />
+                {barVar.box3.disc4}
+              </div>
+              <a href="!#" className="pkg-link">
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </motion.div>
+  );
+};
 
 const CheckBoxWrapper = styled.div`
   position: relative;
@@ -106,4 +153,4 @@ const CheckBox = styled.input`
   }
 `;
 
-export default Services
+export default Services;
