@@ -1406,6 +1406,10 @@
     border-top: 1px solid #c4c4c4;
   }
 
+  .nav-logo {
+    margin-left: 0;
+  }
+
   .nav-link {
     padding-top: 10px;
     padding-bottom: 10px;
