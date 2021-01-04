@@ -2,6 +2,7 @@ import React from "react";
 import { webdevelopment } from "../api/Services";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../Animation";
+import { Link } from "react-router-dom";
 
 const barVar = webdevelopment;
 
@@ -29,9 +30,9 @@ const WebDev = () => {
             <br />
             {barVar.box1.disc4}
           </div>
-          <a href="!#" className="pkg-link">
+          <Link to="/contact" className="pkg-link">
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
       <div className="pricing-second-block middle">
@@ -50,9 +51,9 @@ const WebDev = () => {
             {barVar.box2.disc4}
           </div>
         </div>
-        <a href="!#" className="bottom-btn w-inline-block">
+        <Link to="/contact" className="bottom-btn w-inline-block">
           <div className="bottom-btn__link">Get Started</div>
-        </a>
+        </Link>
       </div>
       <div className="pricing-second-block">
         <img src={barVar.box3.pic} alt="backend" className="pkg-img" />
@@ -69,9 +70,9 @@ const WebDev = () => {
             <br />
             {barVar.box3.disc4}
           </div>
-          <a href="!#" className="pkg-link">
+          <Link to="/contact" className="pkg-link">
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </motion.div>

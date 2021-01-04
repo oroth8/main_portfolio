@@ -32,6 +32,11 @@ const Portfolio = () => {
             them can be seen on my Github page. Feel free to contact me about
             any questions, issues, or contribution requests.
           </p>
+          <p className="project-paragraph project-warning">
+            *Live links use free website hosting. Please be patient if project's
+            live link isn't loading immediately. Server needs time to establish
+            a connection. Thank you.
+          </p>
           <div className="cards-grid-container">
             <motion.div variants={stagRL} id="w-node-84ac4a2cc32b-358a15f7">
               <div className="cards-image-mask">
@@ -49,14 +54,22 @@ const Portfolio = () => {
                 profile, post, comment, and like. A Facebook clone for
                 developers.
                 <span className="project-icons">
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/oroth8/dev_connector"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
                       className="fab fa-github"
                     ></motion.i>
                   </a>
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://agile-plains-50917.herokuapp.com/"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
@@ -83,14 +96,22 @@ const Portfolio = () => {
                 An example of another custom, personal portfolio website created
                 using react. Uses frame-motion animations and styled components.
                 <span className="project-icons">
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/oroth8/react_portfolio"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
                       className="fab fa-github"
                     ></motion.i>
                   </a>
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://tranquil-beyond-16773.herokuapp.com/"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
@@ -117,14 +138,22 @@ const Portfolio = () => {
                 An e-commerce site that utilizes SQL and handlebars engine. This
                 site is similar to amazon and has a admin dashboard.
                 <span className="project-icons">
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/oroth8/EcommerceApp"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
                       className="fab fa-github"
                     ></motion.i>
                   </a>
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://fierce-earth-38835.herokuapp.com/"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
@@ -152,7 +181,11 @@ const Portfolio = () => {
                 information in one, convenient application. MERN Stack.
                 <br />
                 <span className="project-icons">
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/oroth8/GithubFinder"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
@@ -160,7 +193,11 @@ const Portfolio = () => {
                       className="fab fa-github"
                     ></motion.i>
                   </a>
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://ancient-temple-03041.herokuapp.com/"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
@@ -188,14 +225,22 @@ const Portfolio = () => {
                 my Northwestern University course. Uses custom built API, JSON
                 Webtoken, and bcryptJS for encryption.
                 <span className="project-icons">
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/oroth8/explorer"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
                       className="fab fa-github"
                     ></motion.i>
                   </a>
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://gentle-atoll-92825.herokuapp.com/"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
@@ -223,7 +268,11 @@ const Portfolio = () => {
                 dynamic elements to store/create contacts.
                 <br />
                 <span className="project-icons">
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/oroth8/contact_keeper"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}
@@ -231,7 +280,11 @@ const Portfolio = () => {
                       className="fab fa-github"
                     ></motion.i>
                   </a>
-                  <a href="!#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://quiet-beach-22414.herokuapp.com/login"
+                  >
                     <motion.i
                       whileHover={{ scale: 1.5 }}
                       whileTap={{ scale: 0.9 }}

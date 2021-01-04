@@ -2043,3 +2043,8 @@
     transform: translateY(-1px);
   }
 }
+
+.project-warning {
+  font-size: x-small;
+  font-style: italic;
+}
