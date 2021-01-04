@@ -2000,3 +2000,12 @@
 #gf-icon {
   margin-left: 0px;
 }
+
+.vertical-timeline-element-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 60px;
+  height: 60px; */
+  /* border-radius: 50%; */
+}

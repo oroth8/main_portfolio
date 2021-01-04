@@ -38,7 +38,7 @@ const Portfolio = () => {
                 <img
                   src={devcon}
                   sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 229.33334350585938px, 286.66668701171875px"
-                  srcset={`${devcon} 500w, ${devcon} 800w, ${devcon} 1080w, ${devcon} 1600w, ${devcon} 3840w`}
+                  srcSet={`${devcon} 500w, ${devcon} 800w, ${devcon} 1080w, ${devcon} 1600w, ${devcon} 3840w`}
                   alt="DevConnector"
                   className="cards-image"
                 />
@@ -71,7 +71,7 @@ const Portfolio = () => {
                 <img
                   src={reactport}
                   sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 229.33334350585938px, 286.66668701171875px"
-                  srcset={`${reactport} 500w, ${reactport} 800w, ${reactport} 1080w, ${reactport} 1376w`}
+                  srcSet={`${reactport} 500w, ${reactport} 800w, ${reactport} 1080w, ${reactport} 1376w`}
                   alt="react-portfolio"
                   className="cards-image"
                 />
@@ -105,7 +105,7 @@ const Portfolio = () => {
                 <img
                   src={ecom}
                   sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 229.33334350585938px, 286.66668701171875px"
-                  srcset={`${ecom} 500w, ${ecom} 800w, ${ecom} 978w`}
+                  srcSet={`${ecom} 500w, ${ecom} 800w, ${ecom} 978w`}
                   alt=""
                   className="cards-image"
                 />
@@ -141,7 +141,7 @@ const Portfolio = () => {
                 <img
                   src={github}
                   sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 229.33334350585938px, 286.66668701171875px"
-                  srcset={`${github} 500w, ${github} 800w, ${github} 1080w, ${github} 1600w, ${github} 2000w, ${github} 2543w`}
+                  srcSet={`${github} 500w, ${github} 800w, ${github} 1080w, ${github} 1600w, ${github} 2000w, ${github} 2543w`}
                   alt="github-finder"
                   className="cards-image"
                 />
@@ -175,7 +175,7 @@ const Portfolio = () => {
                 <img
                   src={explorer}
                   sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 229.33334350585938px, 286.66668701171875px"
-                  srcset={`${explorer} 500w, ${explorer} 800w, ${explorer} 1080w, ${explorer} 1600w, ${explorer} 1861w`}
+                  srcSet={`${explorer} 500w, ${explorer} 800w, ${explorer} 1080w, ${explorer} 1600w, ${explorer} 1861w`}
                   alt="explorer-game"
                   className="cards-image"
                 />
@@ -210,7 +210,7 @@ const Portfolio = () => {
                 <img
                   src={contactkeep}
                   sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 229.33334350585938px, 286.66668701171875px"
-                  srcset={`${contactkeep} 500w, ${contactkeep} 800w, ${contactkeep} 1080w, ${contactkeep} 1600w, ${contactkeep} 2000w, ${contactkeep} 2560w`}
+                  srcSet={`${contactkeep} 500w, ${contactkeep} 800w, ${contactkeep} 1080w, ${contactkeep} 1600w, ${contactkeep} 2000w, ${contactkeep} 2560w`}
                   alt="contact-keeper"
                   className="cards-image"
                 />

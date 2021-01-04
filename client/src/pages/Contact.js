@@ -207,7 +207,7 @@ const Contact = () => {
                     <input
                       type="text"
                       className="w-input"
-                      maxlength="256"
+                      maxLength="256"
                       name="first_name"
                       required
                       onChange={(e) =>
@@ -226,7 +226,7 @@ const Contact = () => {
                     <input
                       type="text"
                       className="w-input"
-                      maxlength="256"
+                      maxLength="256"
                       name="last_name"
                       required
                       onChange={(e) =>
@@ -242,7 +242,7 @@ const Contact = () => {
                     <input
                       type="email"
                       className="w-input"
-                      maxlength="256"
+                      maxLength="256"
                       name="email"
                       required
                       onChange={(e) =>
@@ -258,7 +258,7 @@ const Contact = () => {
                     <input
                       type="tel"
                       className="w-input"
-                      maxlength="256"
+                      maxLength="256"
                       name="phone"
                       onChange={(e) =>
                         dispatch({ type: "phone", value: e.target.value })
@@ -271,7 +271,7 @@ const Contact = () => {
                   >
                     <label>Message</label>
                     <textarea
-                      maxlength="5000"
+                      maxLength="5000"
                       name="message"
                       className="w-input"
                       required
