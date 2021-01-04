@@ -4,6 +4,7 @@ import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
 import { motion } from "framer-motion";
 import { pageAnimation, photoAnim } from "../Animation";
+import ScrollUp from "../layout/ScrollUp";
 
 import Grad from "../layout/Grad";
 import Work from "../layout/Work";
@@ -20,7 +21,9 @@ const About = () => {
   return (
     <Fragment>
       <div>
+        <ScrollUp />
         <Navbar />
+
         <motion.section
           variants={pageAnimation}
           initial="hidden"
