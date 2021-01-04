@@ -5,6 +5,7 @@ import Footer from "../layout/Footer";
 import { motion } from "framer-motion";
 import { pageAnimation, photoAnim } from "../Animation";
 import ScrollUp from "../layout/ScrollUp";
+import pdf from "../assets/OWEN_ROTH_RESUME.pdf";
 
 import Grad from "../layout/Grad";
 import Work from "../layout/Work";
@@ -66,10 +67,11 @@ const About = () => {
                 <motion.a
                   variants={photoAnim}
                   id="w-node-9ede16908eb0-1086c41b"
-                  href="!#"
+                  href={pdf}
+                  download
                   className="about-btn btn-title w-button"
                 >
-                  Download CV
+                  Resume
                 </motion.a>
                 <h4 className="info-heading">Degree: Economics</h4>
                 <h4 className="info-heading">Language: English</h4>
